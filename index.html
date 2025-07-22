@@ -2,168 +2,66 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SoloLevelingPS</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-image: url('https://cdn.wallpapersafari.com/26/74/Yj6GJv.jpg');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      min-height: 100vh;
-    }
-
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 0, 0, 0.8);
-      z-index: -1;
-    }
-
-    h1 {
-      color: violet;
-      margin-top: 50px;
-      font-size: 3rem;
-      white-space: nowrap;
-      overflow: hidden;
-      border-right: .15em solid violet;
-      width: 0;
-      animation: typing 2.5s steps(30, end) forwards, blink .75s step-end infinite;
-    }
-
-    @keyframes typing {
-      from { width: 0 }
-      to { width: 16ch }
-    }
-
-    @keyframes blink {
-      50% { border-color: transparent }
-    }
-
-    p {
-      color: #ccc;
-      max-width: 600px;
-      font-size: 1.2rem;
-      margin: 10px 20px 30px 20px;
-      animation: fadeIn 1.5s ease-in-out;
-    }
-
-    .status {
-      background-color: #4caf50;
-      padding: 10px 30px;
-      border-radius: 30px;
-      color: white;
-      font-weight: bold;
-      margin-bottom: 30px;
-      animation: fadeIn 2s ease-in-out;
-    }
-
-    a {
-      display: block;
-      color: #8a2be2;
-      text-decoration: none;
-      margin: 10px 0;
-      font-size: 1.1rem;
-      animation: fadeIn 2.5s ease-in-out;
-    }
-
-    .ip-box {
-      background: #111;
-      border-left: 5px solid #8a2be2;
-      padding: 20px;
-      margin: 30px;
-      max-width: 600px;
-      text-align: left;
-      font-family: 'Courier New', monospace;
-      font-size: 14px;
-      white-space: pre-wrap;
-      color: #00ff00;
-      animation: fadeIn 3s ease-in-out;
-      position: relative;
-    }
-
-    .copy-btn {
-      background-color: violet;
-      color: black;
-      border: none;
-      padding: 8px 16px;
-      border-radius: 5px;
-      font-weight: bold;
-      margin-top: 15px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .copy-btn:hover {
-      background-color: #b266ff;
-    }
-
-    .copied-msg {
-      color: lightgreen;
-      margin-top: 8px;
-      font-size: 0.9rem;
-      display: none;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
 </head>
-<body>
+<body class="bg-gradient-to-br from-black via-gray-900 to-black text-white font-sans min-h-screen">
 
-  <h1>SoloLevelingPS</h1>
+  <!-- Hero Section -->
+  <section class="text-center py-10 px-4">
+    <h2 class="text-4xl font-extrabold text-pink-500 drop-shadow-lg">Solo Leveling PS</h2>
+    <p class="text-gray-400 mt-2">⭐️⭐️⭐️⭐️⭐️ 67 Reviews • Rating: <span class="text-yellow-400 font-semibold">4.9</span></p>
+  </section>
 
-  <p>
-    Selamat datang di server private Growtopia <span style="color:violet;">SoloLevelingPS</span>!  
-    Nikmati pengalaman bermain unik dengan item Solo Leveling eksklusif, drop rate custom, 
-    dan fitur premium tanpa biaya. Ayo bergabung dan kuasai dunia!
-  </p>
+  <!-- Buttons -->
+  <section class="flex flex-col items-center gap-4 px-4">
+    <a href="https://www.mediafire.com/file/c4ie41uygoxba8h/SoloLevelingPS.txt/file" target="_blank" class="bg-blue-600 hover:bg-blue-700 transition px-6 py-3 rounded-full shadow text-white w-full max-w-xs text-center">📥 Download Host (VHost)</a>
+    <a href="https://gtpshost.com/slps.txt" target="_blank" class="bg-pink-600 hover:bg-pink-700 transition px-6 py-3 rounded-full shadow text-white w-full max-w-xs text-center">🚀 Copy Powertunnel</a>
+    <a href="https://growsoft.cc/how-to-play" target="_blank" class="bg-gray-800 hover:bg-gray-700 transition px-6 py-3 rounded-full shadow text-white w-full max-w-xs text-center">📱 All in One</a>
+  </section>
 
-  <div class="status">
-    ✅ Status Server: ONLINE
-  </div>
-
-  <a href="https://www.mediafire.com/file/ybial7wzepsu08b/SoloLevelingPS.txt/file" target="_blank">
-    🔗 Download VHOST (Mediafire)
-  </a>
-
-  <a href="https://growsoft.cc/how-to-play" target="_blank">
-    📋 Salin PTUNNEL Config (WINDOWS)
-  </a>
-
-  <div class="ip-box" id="ipBox">
-    <strong> </strong>
-<pre id="ipText">
+  <!-- IP Box -->
+  <section class="bg-gray-900 border border-gray-700 p-4 mt-8 w-fit mx-auto rounded-lg relative max-w-md">
+    <h3 class="text-lg font-semibold mb-2">🔗 IP Addresses</h3>
+    <pre id="ipBlock" class="text-white text-sm whitespace-pre-wrap font-mono">
 91.134.85.13 growtopia1.com
 91.134.85.13 growtopia2.com
 91.134.85.13 www.growtopia1.com
 91.134.85.13 www.growtopia2.com
-</pre>
-    <button class="copy-btn" onclick="copyIP()">📋 Salin IP</button>
-    <div id="copiedMsg" class="copied-msg">✅ Disalin!</div>
-  </div>
+91.134.85.13 RvLnd.here
+    </pre>
+    <button onclick="copyText()" class="absolute top-2 right-2 text-xs bg-gray-700 px-2 py-1 rounded hover:bg-gray-600">📋 Salin</button>
+  </section>
+
+  <!-- Discord & WhatsApp Buttons -->
+  <section class="flex flex-col items-center gap-4 mt-10 px-4">
+    <a href="https://discord.gg/euwfhsGapm" target="_blank" class="bg-indigo-600 hover:bg-indigo-700 transition px-6 py-3 rounded-full shadow text-white w-full max-w-xs text-center">Join Discord</a>
+    <a href="https://chat.whatsapp.com/DcPIvyqONF2AXVepzOkqhd?mode=r_c" target="_blank" class="bg-green-600 hover:bg-green-700 transition px-6 py-3 rounded-full shadow text-white w-full max-w-xs text-center">Join WhatsApp Group</a>
+  </section>
+
+  <!-- Server Info -->
+  <section class="text-center mt-12">
+    <h2 class="text-2xl font-semibold text-pink-400 mb-3">🌐 Server Status</h2>
+    <ul class="text-gray-300 text-sm space-y-1">
+      <li>📍 Location: 🇫🇷 France</li>
+      <li>☁️ Cloud Provider: OVH</li>
+      <li>⚡ Status: <span class="text-green-400 font-semibold">Online</span></li>
+    </ul>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center text-gray-600 text-xs mt-16 mb-4">
+    &copy; 2025 Solo Leveling PS. All rights reserved.
+  </footer>
 
   <script>
-    function copyIP() {
-      const ipText = document.getElementById('ipText').innerText;
-      navigator.clipboard.writeText(ipText).then(() => {
-        const msg = document.getElementById('copiedMsg');
-        msg.style.display = 'block';
-        setTimeout(() => { msg.style.display = 'none'; }, 2000);
+    function copyText() {
+      const text = document.getElementById('ipBlock').innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        alert('IP Address copied!');
       });
     }
   </script>
-
 </body>
 </html>
